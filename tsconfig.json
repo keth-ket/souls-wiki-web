@@ -21,17 +21,17 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "@/app/*": ["./app/*"],
+      "@/components/*": ["./components/*"],
+      "@/public/*": ["./public/*"],
+      "@/styles/*": ["./styles/*"]
+    }
   },
 
-  "baseUrl": ".",
-  "paths": {
-    "@/*": ["./*"],
-    "@/app/*": ["./app/*"],
-    "@/components/*": ["./components/*"],
-    "@/public/*": ["./public/*"]
-  },
-  
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
