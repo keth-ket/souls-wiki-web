@@ -1,34 +1,76 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
-First, run the development server:
+After cloning the repo to your laptop, first install all dependencies with:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+yarn
+
 ```
+
+Then, run the development server:
+
+```bash
+yarn dev
+
+```
+
+### Add packages with yarn
+
+```bash
+yarn add -dev package-name
+
+```
+
+### Linting with yarn
+
+```bash
+yarn lint
+
+# to fix linting errors
+yarn lint --fix
+```
+
+Add the following extensions to your VSCODE:
+
+- ESLint
+- Prettier ESLint
+- Prettier - Code Formatter
+- Prettier ESLint TypeScript
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Design
 
-To learn more about Next.js, take a look at the following resources:
+Inspiration will mainly come from: [Stardew Valley Wiki](https://www.stardewvalleywiki.com/Stardew_Valley_Wiki)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Components 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+We will use components library [Shadcn](https://ui.shadcn.com/), this will be the template for our components.
 
-## Deploy on Vercel
+To add any components with shadcn run:
+```bash
+yarn shadcn add [component]
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#For example to add button component
+yarn shadcn add button
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+## Icons
+
+We will be using [lucide react icon](https://lucide.dev/icons/)
+
+## For contributors
+
+- Always use "yarn" to add package
+- Run "yarn lint" to fix any linting issue before making a pull request
+- Make sure the page is responsive
+- Develop your customized component in widgets. 
+- Please don't commit directly to the main branch, make a branch and create a pull request once you are done.
+
+## Good luck cooking
+
+
