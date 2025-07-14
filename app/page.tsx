@@ -5,7 +5,8 @@ export default function Page() {
     <>
       <h1 className="text-3xl font-bold underline">Hello World!</h1>
       <Button variant="outline">Click me</Button>
-      <Link href="/events/event-info-template">Events</Link>
+      <Link href="/events/event-info-template">Events Template</Link>  
+      <Link href="/pets/pet-template">Pets Template</Link>    
     </>
   );
 }
