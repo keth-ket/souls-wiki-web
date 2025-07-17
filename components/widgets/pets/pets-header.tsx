@@ -1,6 +1,6 @@
 import TableOfContents from "@/components/general/table-of-contents"
 import Image from "next/image";
-import { Star } from "lucide-react"
+import { Star, Zap, Drama } from "lucide-react"
 import {
   Table,
   TableBody,
@@ -11,6 +11,8 @@ import {
 const filledStar = "text-yellow-500 fill-yellow-500 w-4 h-4 mr-1 inline";
 const emptyStar = "text-gray-300 fill-gray-300 w-4 h-4 mr-1 inline" ;
 const redStar = "text-red-500 fill-red-400 w-4 h-4 mr-1 inline";
+const zapIcon = "text-black fill-yellow-500 mr-1 inline ";
+const dramaIcon = "text-black fill-blue-500 mr-1 inline ";
 
 function printStars(rating, isOverall = false) {
   const stars = [];
@@ -34,7 +36,7 @@ function printStars(rating, isOverall = false) {
   return stars;
 }
 
-export default function PetHeader({ title, description, imageSrc, sections, journeyStars, pvpStars, bossesStars, overallStars }) {
+export default function PetHeader({ title, description, imageSrc, petName, journeyStars, pvpStars, bossesStars, overallStars, mainRole, energyGain, sections }) {
   return (
     <div className="">
       <div>
@@ -43,7 +45,7 @@ export default function PetHeader({ title, description, imageSrc, sections, jour
           <Table className = " w-[400px] float-right">
             <TableBody className="border-3">
                 <TableRow>
-                  <TableCell colSpan={2} className="text-center  bg-blue-100">Pet name here</TableCell>
+                  <TableCell colSpan={2} className="text-center  bg-blue-100">{petName}</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell colSpan={2} className="text-center">
@@ -74,12 +76,12 @@ export default function PetHeader({ title, description, imageSrc, sections, jour
                   <TableCell className="text-left">Overall: {printStars(overallStars, true)}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className="text-center bg-gray-100">Main role </TableCell>
-                  <TableCell className="text-left">Put role here </TableCell>
+                  <TableCell className="text-center bg-gray-100"><Drama className={dramaIcon}/> Main role </TableCell>
+                  <TableCell className="text-left">{mainRole} </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className="text-center bg-gray-100">Energy Gain </TableCell>
-                  <TableCell className="text-left">Put energy gain here </TableCell>
+                  <TableCell className="text-center bg-gray-100"><Zap className={zapIcon}/> Energy Gain </TableCell>
+                  <TableCell className="text-left">{energyGain} </TableCell>
                 </TableRow>
               </TableBody>
             </Table>
