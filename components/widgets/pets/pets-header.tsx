@@ -42,7 +42,7 @@ export default function PetHeader({ title, description, imageSrc, petName, journ
       <div>
         <h1 className="border-b-2 border-[#a2a9b1] pb-2 pt-4 mt-8 scroll-mt-24 text-4xl font-bold">{title}</h1>
           <div className="float-right clear-right m-2">
-          <Table className = " w-[400px] float-right">
+          <Table className = " max-w-[400px] float-right">
             <TableBody className="border-3">
                 <TableRow>
                   <TableCell colSpan={2} className="text-center  bg-blue-100">{petName}</TableCell>
@@ -52,36 +52,35 @@ export default function PetHeader({ title, description, imageSrc, petName, journ
                     <Image
                       src={imageSrc}
                       alt="Pet Header Image"
-                      width="200"
                       className="m-auto"
                     />
                   </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell colSpan={2} className="text-center  bg-gray-100">Information</TableCell>
+                  <TableCell colSpan={2} className="text-center  bg-gray-100 whitespace-normal break-words">Information</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell rowSpan={5} className="text-center  bg-gray-100 w-[130px]"><Star className={redStar} /> Usefullness</TableCell>
+                  <TableCell rowSpan={5} className="text-center  bg-gray-100 whitespace-normal break-words"><Star className={redStar} /> Usefullness</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className="text-left">Journey: {printStars(journeyStars, false)}</TableCell>
+                  <TableCell className="text-left whitespace-normal break-words">Journey: {printStars(journeyStars, false)}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className="text-left">PvP: {printStars(pvpStars, false)}</TableCell>
+                  <TableCell className="text-left whitespace-normal break-words">PvP: {printStars(pvpStars, false)}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className="text-left">Bosses: {printStars(bossesStars, false)}</TableCell>
+                  <TableCell className="text-left whitespace-normal break-words">Bosses: {printStars(bossesStars, false)}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className="text-left">Overall: {printStars(overallStars, true)}</TableCell>
+                  <TableCell className="text-left whitespace-normal break-words">Overall: {printStars(overallStars, true)}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className="text-center bg-gray-100"><Drama className={dramaIcon}/> Main role </TableCell>
-                  <TableCell className="text-left">{mainRole} </TableCell>
+                  <TableCell className="text-center bg-gray-100 whitespace-normal break-words"><Drama className={dramaIcon}/> Main role </TableCell>
+                  <TableCell className="text-left whitespace-normal break-words">{mainRole} </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className="text-center bg-gray-100"><Zap className={zapIcon}/> Energy Gain </TableCell>
-                  <TableCell className="text-left">{energyGain} </TableCell>
+                  <TableCell className="text-center bg-gray-100 whitespace-normal break-words"><Zap className={zapIcon}/> Energy Gain </TableCell>
+                  <TableCell className="text-left whitespace-normal break-words">{energyGain} </TableCell>
                 </TableRow>
               </TableBody>
             </Table>

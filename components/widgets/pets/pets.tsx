@@ -18,7 +18,7 @@ export default function PetPage({title, description, headerImage, petName, journ
       content: (
         <>
           <div className='float-left flex-direction-column p-2'>
-            <Table className = " w-[300px] ">
+            <Table className = " max-w-[300px] ">
             <TableBody className="border-3">
                 <TableRow>
                   <TableCell rowSpan={4} className="text-center bg-gray-100 w-[130px]"><Sparkles className={sparklesIcon} /> Active skill</TableCell>
@@ -55,7 +55,7 @@ export default function PetPage({title, description, headerImage, petName, journ
       content: (
         <>
         <div className='float-left p-2'>
-          <Table className = " w-[700px] table-fixed">
+          <Table className = " max-w-[700px] table-fixed">
             <TableBody className="border-3">
                 <TableRow>
                   <TableCell className="text-center bg-gray-100 border-2">Strengths </TableCell>
