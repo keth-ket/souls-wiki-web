@@ -1,5 +1,6 @@
 import PetsHeader from '@/components/widgets/pets/pets-header'
 import PetsSection from '@/components/widgets/pets/pets-section'
+import '@/styles/globals.css';
 import {
   Table,
   TableBody,
@@ -24,25 +25,25 @@ export default function PetPage({title, description, headerImage, petName, journ
                   <TableCell rowSpan={4} className="text-center bg-gray-100 w-[130px]"><Sparkles className={sparklesIcon} /> Active skill</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className="text-left h-[50px] whitespace-normal break-words">Lvl 1: {activeSkillsLevel1}</TableCell>
+                  <TableCell className="text-left h-[50px] table-base">Lvl 1: {activeSkillsLevel1}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className="text-left h-[50px] whitespace-normal break-words">Lvl 10: {activeSkillsLevel10}</TableCell>
+                  <TableCell className="text-left h-[50px] table-base">Lvl 10: {activeSkillsLevel10}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className="text-left h-[50px] whitespace-normal break-words">Lvl 20: {activeSkillsLevel20}</TableCell>
+                  <TableCell className="text-left h-[50px] table-base">Lvl 20: {activeSkillsLevel20}</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell rowSpan={4} className="text-center bg-gray-100 w-[130px]"><Orbit className={orbitIcon} /> Passive skill</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className="text-left h-[50px] whitespace-normal break-words">Lvl 5: {passiveSkillsLevel5}</TableCell>
+                  <TableCell className="text-left h-[50px] table-base">Lvl 5: {passiveSkillsLevel5}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className="text-left h-[50px] whitespace-normal break-words">Lvl 15: {passiveSkillsLevel15}</TableCell>
+                  <TableCell className="text-left h-[50px] table-base">Lvl 15: {passiveSkillsLevel15}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className="text-left h-[50px] whitespace-normal break-words  ">Lvl 25: {passiveSkillsLevel25}</TableCell>
+                  <TableCell className="text-left h-[50px] table-base  ">Lvl 25: {passiveSkillsLevel25}</TableCell>
                 </TableRow>
               </TableBody>
             </Table>
@@ -62,12 +63,12 @@ export default function PetPage({title, description, headerImage, petName, journ
                   <TableCell className="text-center bg-gray-100 border-2">Weaknesses </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className="text-left p-4 border-2 whitespace-normal break-words"><ul>
+                  <TableCell className="text-left p-4 border-2 table-base"><ul>
                     {strengths.map((strength, index) => (
                       <li key={index} className='p-2'> • {strength}</li>
                     ))}
                   </ul></TableCell>
-                  <TableCell className="text-left p-4 border-2 whitespace-normal break-words"><ul>
+                  <TableCell className="text-left p-4 border-2 table-base"><ul>
                     {weaknesses.map((weakness, index) => (
                       <li key={index} className='p-2'> • {weakness}</li>
                     ))}
