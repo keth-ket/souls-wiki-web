@@ -19,7 +19,7 @@ export default function PetPage({title, description, headerImage, petName, journ
       content: (
         <>
           <div className='float-left flex-direction-column p-2'>
-            <Table className = " max-w-[300px] ">
+            <Table className = " max-w-[700px] ">
             <TableBody className="border-3">
                 <TableRow>
                   <TableCell rowSpan={4} className="text-center bg-gray-100 w-[130px]"><Sparkles className={sparklesIcon} /> Active skill</TableCell>
